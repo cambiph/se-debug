@@ -1,0 +1,49 @@
+version: "3"
+services:
+  selenium-hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    shm_size: 2g
+    ports:
+      - 4444:4444
+    environment:
+      - NODE_MAX_SESSION=5
+      - GRID_DEBUG=false
+    volumes:
+      - /dev/shm:/dev/shm/
+  selenium-chrome:
+    image: selenium/node-chrome-debug
+    container_name: chrome
+    shm_size: 2g
+    ports:
+      - 5900:5900
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+      - HUB_PORT_4444_TCP_PORT=4444
+      - SCREEN_WIDTH=2560
+      - SCREEN_HEIGHT=1440
+      - GRID_DEBUG=true
+    volumes:
+      - /tmp/:/tmp/
+      - /dev/shm/:/dev/shm/
+  selenium-firefox:
+    image: selenium/node-firefox-debug
+    container_name: firefox
+    privileged: true
+    shm_size: 2g
+    ports:
+      - 5901:5900
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+      - HUB_PORT_4444_TCP_PORT=4444
+      - SCREEN_WIDTH=2560
+      - SCREEN_HEIGHT=1440
+      - GRID_DEBUG=true
+    volumes:
+      - /tmp/
+      - /dev/shm/:/dev/shm/
+      - ./end2endtest/firefox_profiles:/tmp/firefox_profiles
