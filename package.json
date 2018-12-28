@@ -1,27 +1,25 @@
 {
-    "name": "end2endtest",
-    "version": "0.0.0",
-    "devDependencies": {
-      "firefox-profile": "^1.2.0",
-      "grunt": "0.4.5",
-      "grunt-cli": "1.2.0",
-      "grunt-protractor-runner": "5.0.0",
-      "grunt-shell-spawn": "0.3.10",
-      "grunt-simple-smtp": "0.1.0",
-      "ip": "1.1.5",
-      "jasmine-fail-fast": "2.0.0",
-      "jasmine-reporters": "^2.3.2",
-      "jasmine-spec-reporter": "^4.2.1",
-      "load-grunt-tasks": "2.0.0",
-      "protractor": "6.0.0-beta",
-      "protractor-screenshoter-plugin": "0.10.3",
-      "q": "^1.5.1",
-      "request": "2.88.0"
-    },
-    "engines": {
-      "node": ">=0.10.0"
-    },
-    "dependencies": {
-      
-    }
-  }
+  "name": "end2endtest",
+  "version": "0.0.0",
+  "devDependencies": {
+    "firefox-profile": "^1.2.0",
+    "grunt": "0.4.5",
+    "grunt-cli": "1.2.0",
+    "grunt-protractor-runner": "5.0.0",
+    "grunt-shell-spawn": "0.3.10",
+    "grunt-simple-smtp": "0.1.0",
+    "ip": "1.1.5",
+    "jasmine-fail-fast": "2.0.0",
+    "jasmine-reporters": "^2.3.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "load-grunt-tasks": "2.0.0",
+    "protractor": "6.0.0-beta",
+    "protractor-screenshoter-plugin": "0.10.3",
+    "q": "^1.5.1",
+    "request": "2.88.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {}
+}
