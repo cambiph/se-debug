@@ -13,6 +13,7 @@ exports.config = {
         includeStackTrace: true
     },
     maxSessions: 1,
+    baseUrl: "http://www.seleniumhq.org",
     capabilities: {
         "browserName": "firefox",
         //"moz:firefoxOptions": {
